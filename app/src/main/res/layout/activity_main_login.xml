@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".LoginMainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="top"
+        android:layout_weight="0.5"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/grupo3"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="bottom"
+        android:layout_weight="0.7"
+android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/border_edittext_color"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="13dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.13"
+                android:background="@drawable/mail"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="Usuario"
+                android:layout_weight="1"
+                android:textColorHint="@android:color/darker_gray"
+                android:paddingLeft="10dp"
+                android:background="@drawable/editext_background"
+                android:textColor="@android:color/black"
+                android:layout_marginRight="15dp"
+                android:inputType="text"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/border_edittext_color"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="13dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.13"
+                android:background="@drawable/lock"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="Contraseña"
+                android:layout_weight="1"
+                android:textColorHint="@android:color/darker_gray"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/editext_background"
+                android:textColor="@android:color/black"
+                android:layout_marginRight="15dp"
+                android:inputType="textPassword"
+/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="INGRESAR"
+            android:onClick="GoMenu"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

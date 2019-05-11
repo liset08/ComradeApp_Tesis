@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.comradeappsoftware">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ListaProductoxNotasActivity"
+            android:label="Productos"
+            android:parentActivityName=".ListaNotasActivity"
+            android:theme="@style/AppThemeAction">
+
+        </activity>
+        <activity
+            android:name=".ListaNotasActivity"
+            android:label="Listas"
+
+            android:theme="@style/AppThemeAction">
+
+        </activity>
+        <activity
+            android:name=".NuevoProductoActivity"
+            android:label="Nuevo Producto"
+
+            android:parentActivityName=".ListaProductosActivity"
+            android:theme="@style/AppThemeAction">
+
+        </activity>
+        <activity
+            android:name=".ListaProductosActivity"
+            android:label=""
+            android:parentActivityName=".MenuMainActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".PerfilUsuarioActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MenuMainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".SplachActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginMainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+
+</manifest>
