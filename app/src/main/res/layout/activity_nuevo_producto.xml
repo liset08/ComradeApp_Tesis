@@ -8,21 +8,22 @@
     tools:context=".NuevoProductoActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-android:layout_marginLeft="40dp"
+
         android:layout_marginTop="20dp"
-        android:layout_marginRight="40dp"
+
         android:layout_weight="0.5"
         android:background="#61E7E2E2"
         android:baselineAligned="@color/colorPrimary"
         android:layout_height="0dp">
 
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="@drawable/camera"/>
+            android:id="@+id/imageView_Product"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            />
 
 
     </LinearLayout>
@@ -184,9 +185,11 @@ android:layout_marginLeft="40dp"
         android:layout_width="match_parent"
         android:layout_weight="0.13"
         android:layout_height="0dp"
+        android:textAllCaps="false"
+        android:textStyle="bold|italic"
         android:textColor="@android:color/white"
         android:onClick="BackList"
         android:background="@color/colorPrimaryDark"
-        android:text="AGREGAR"/>
+        android:text="Agregar"/>
 
 </LinearLayout>
