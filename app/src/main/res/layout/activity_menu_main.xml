@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondomenu"
     android:orientation="vertical"
-    tools:context=".MenuMainActivity">
+    tools:context=".activities.MenuMainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

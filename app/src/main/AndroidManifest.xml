@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -13,40 +14,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ListaProductoxNotasActivity"
+        <activity android:name=".activities.ListaProductoxNotasActivity"
             android:label="Productos"
-            android:parentActivityName=".ListaNotasActivity"
+            android:parentActivityName=".activities.ListaNotasActivity"
             android:theme="@style/AppThemeAction">
 
         </activity>
         <activity
-            android:name=".ListaNotasActivity"
+            android:name=".activities.ListaNotasActivity"
             android:label="Listas"
 
             android:theme="@style/AppThemeAction">
 
         </activity>
         <activity
-            android:name=".NuevoProductoActivity"
+            android:name=".activities.NuevoProductoActivity"
             android:label="Nuevo Producto"
 
-            android:parentActivityName=".ListaProductosActivity"
+            android:parentActivityName=".activities.ListaProductosActivity"
             android:theme="@style/AppThemeAction">
 
         </activity>
         <activity
-            android:name=".ListaProductosActivity"
+            android:name=".activities.ListaProductosActivity"
             android:label=""
-            android:parentActivityName=".MenuMainActivity"
+            android:parentActivityName=".activities.MenuMainActivity"
             android:theme="@style/AppThemeAction" />
         <activity
-            android:name=".PerfilUsuarioActivity"
+            android:name=".activities.PerfilUsuarioActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".MenuMainActivity"
+            android:name=".activities.MenuMainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".SplachActivity"
+            android:name=".activities.SplachActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,7 +56,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginMainActivity"
+            android:name=".activities.LoginMainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 

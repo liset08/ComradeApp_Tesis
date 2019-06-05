@@ -1,4 +1,4 @@
-package com.example.comradeappsoftware;
+package com.example.comradeappsoftware.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import com.example.comradeappsoftware.R;
+import com.example.comradeappsoftware.activities.LoginMainActivity;
 
 public class SplachActivity extends AppCompatActivity {
 
@@ -30,7 +33,7 @@ public class SplachActivity extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(4000);
-                    Intent intent = new Intent(getApplicationContext(),LoginMainActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), LoginMainActivity.class);
                     startActivity(intent);
                     finish();
                 }catch (InterruptedException e){
