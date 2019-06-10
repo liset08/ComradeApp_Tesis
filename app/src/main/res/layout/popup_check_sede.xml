@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <ImageView
+        android:id="@+id/ic_close"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="-10dp"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:elevation="5dp"
+        android:src="@drawable/ic_checked" />
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:foregroundGravity="center"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-50dp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/cardView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:layout_gravity="center">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+
+                    android:layout_marginTop="70dp"
+                    android:textSize="25dp"
+                    android:text="Correcto"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Usted se encunetra en el supermercado. ¿Desea crear una nueva lista?"/>
+                <LinearLayout
+                    android:id="@+id/ll01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom">
+                    <Button
+                        android:id="@+id/validate_map"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Si"
+                        android:background="@drawable/btn_aceptar_popup"
+                        android:backgroundTint="#32BEA6"
+                        android:layout_weight="1"
+                        android:textColor="@color/cardview_light_background"
+                        android:layout_margin="5dp"
+                        android:onClick="acceptClick"/>
+
+                    <Button
+                        android:id="@+id/cancel_map"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:layout_weight="1"
+                        android:textColor="@color/cardview_light_background"
+                        android:background="@drawable/btn_aceptar_popup"
+                        android:backgroundTint="#32BEA6"
+                        android:layout_margin="5dp"
+                        android:onClick="cancelClick"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

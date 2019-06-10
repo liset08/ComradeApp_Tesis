@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.Usuario.RegistroUsuarioActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="25dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Crear una cuenta "
+                android:layout_marginBottom="45dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textSize="80px"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="16dp"
+                    android:text="Nombres "
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/etxt_nombre"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="16dp"
+                    android:text="Apellidos "
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/etxt_apellido"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="16dp"
+                    android:text="DNI "
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/etxt_dni"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="16dp"
+                    android:inputType="number"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary">
+
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="16dp"
+                    android:text="Correo Electronico "
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/etxt_correo"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="16dp"
+                    android:inputType="textEmailAddress"
+
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary">
+
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="16dp"
+                    android:text="Contraseña"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/etxt_contraseña"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="16dp"
+                    android:inputType="textPassword"
+
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary">
+
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="16dp"
+                    android:text="Repetir contraseña"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/etxt_contraseña_repit"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="16dp"
+                    android:inputType="textPassword"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_weight="0.13"
+                android:layout_height="0dp"
+                android:textAllCaps="false"
+                android:layout_marginTop="40dp"
+                android:textStyle="bold|italic"
+                android:onClick="RegistrarUsuario"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+                android:text="Agregar"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

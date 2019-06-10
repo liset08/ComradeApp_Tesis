@@ -3,18 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.comradeappsoftware">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activities.ListaProductoxNotasActivity"
+        <activity android:name=".activities.Usuario.RegistroUsuarioActivity"
+            android:theme="@style/AppThemeAction"></activity>
+        <activity
+            android:name=".activities.ListaProductoxNotasActivity"
             android:label="Productos"
             android:parentActivityName=".activities.ListaNotasActivity"
             android:theme="@style/AppThemeAction">
@@ -23,25 +27,23 @@
         <activity
             android:name=".activities.ListaNotasActivity"
             android:label="Listas"
-
             android:theme="@style/AppThemeAction">
 
         </activity>
         <activity
-            android:name=".activities.NuevoProductoActivity"
+            android:name=".activities.ProductoModulo1.NuevoProductoActivity"
             android:label="Nuevo Producto"
-
-            android:parentActivityName=".activities.ListaProductosActivity"
+            android:parentActivityName=".activities.ProductoModulo1.ListaProductosActivity"
             android:theme="@style/AppThemeAction">
 
         </activity>
         <activity
-            android:name=".activities.ListaProductosActivity"
+            android:name=".activities.ProductoModulo1.ListaProductosActivity"
             android:label=""
             android:parentActivityName=".activities.MenuMainActivity"
-            android:theme="@style/AppThemeAction" />
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".activities.PerfilUsuarioActivity"
+            android:name=".activities.Usuario.PerfilUsuarioActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".activities.MenuMainActivity"

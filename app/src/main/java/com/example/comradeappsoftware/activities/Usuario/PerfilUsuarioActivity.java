@@ -1,4 +1,4 @@
-package com.example.comradeappsoftware.activities;
+package com.example.comradeappsoftware.activities.Usuario;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
