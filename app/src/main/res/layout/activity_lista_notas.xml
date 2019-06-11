@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,75 +16,37 @@
         android:orientation="vertical"
         android:padding="15dp"
         android:gravity="center_vertical"
-        android:layout_weight="0.2"
-        android:layout_height="0dp">
+        android:layout_height="130dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cardview_light_background"
+            android:text="  Supermercado : "
+            android:layout_marginBottom="10dp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/editext_background"
 android:layout_marginBottom="10dp"
             android:orientation="horizontal">
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-android:layout_marginBottom="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:layout_weight="0.10"
-                android:background="@drawable/calendar"/>
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:hint="Fecha"
-            android:layout_weight="1"
-            android:textColorHint="@android:color/darker_gray"
-            android:paddingLeft="10dp"
-            android:background="@drawable/editext_background"
-            android:textColor="@android:color/black"
-            android:layout_marginRight="15dp"
-            android:inputType="date"
 
-            android:layout_marginBottom="15dp"/>
+            <SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:queryHint="Supermercado"
+                />
+
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/editext_background"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:layout_weight="0.10"
-                android:background="@drawable/placeholder"/>
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:hint="Ubicación"
-                android:layout_weight="1"
-                android:textColorHint="@android:color/darker_gray"
-                android:paddingLeft="10dp"
-                android:background="@drawable/editext_background"
-                android:textColor="@android:color/black"
-                android:inputType="text"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="15dp"/>
 
-        </LinearLayout>
     </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.6"
+            android:layout_height="match_parent"
 android:layout_marginTop="20dp"
             android:orientation="vertical">
 
@@ -96,13 +58,13 @@ android:layout_marginTop="20dp"
                 >
 
 
-                <GridLayout
-                    android:id="@+id/mainGrid2"
+                <GridView
+                    android:id="@+id/grid_orders"
                     android:layout_width="match_parent"
-                    android:layout_height="500dp"
+                    android:layout_height="match_parent"
                     android:alignmentMode="alignMargins"
                     android:layout_marginTop="20dp"
-                    android:columnCount="2"
+                    android:columnCount="4"
                     android:columnOrderPreserved="false"
                     android:listSelector="#0f0"
                     android:layout_marginRight="15dp"
@@ -110,602 +72,19 @@ android:layout_marginTop="20dp"
                     android:paddingBottom="0dp"
                     android:rowCount="3"
                     tools:targetApi="ice_cream_sandwich"
-                    tools:ignore="UselessParent">
-
-                    <!-- Row 1 -->
-
-                    <!-- Column 1 -->
-                    <android.support.v7.widget.CardView
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:cardBackgroundColor="@android:color/white"
-                        android:layout_columnWeight="1"
-                        android:layout_marginBottom="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp"
-                        app:cardElevation="8dp"
-                        android:onClick="GoListaProductoXNota"
-                        android:layout_rowWeight="1"
-
-                        >
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:background="@android:color/white"
-                            android:orientation="vertical">
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_gravity="top"
-                                android:layout_weight="0.8"
-                                android:background="@color/colorPrimaryDark"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="04-05-2019"
-                                    android:textAlignment="center"
-                                    android:layout_gravity="center"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_weight="0.6"
-                                android:gravity="center_horizontal"
-                                android:background="#D31019"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:text="Plaza Vea"
-                                    android:padding="5dp"
-                                    android:textAlignment="center"
-                                    android:layout_gravity="center_horizontal"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="13sp"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_gravity="top"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Sta. Anita"
-                                    android:textAlignment="center"
-
-                                    android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="S/. 50.70"
-                                    android:textAlignment="center"
-
-                                    android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>
-
-                    <!-- Card 1 -->
-                    <android.support.v7.widget.CardView
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:cardBackgroundColor="@android:color/white"
-                        android:layout_columnWeight="1"
-                        android:layout_marginBottom="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp"
-                        app:cardElevation="8dp"
-                        android:layout_rowWeight="1"
-
-                        >
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:background="@android:color/white"
-                            android:orientation="vertical">
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_gravity="top"
-                                android:layout_weight="0.8"
-                                android:background="@color/colorPrimaryDark"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="04-05-2019"
-                                    android:textAlignment="center"
-                                    android:layout_gravity="center"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_weight="0.6"
-                                android:gravity="center_horizontal"
-                                android:background="#EDCC32"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:text="Metro"
-                                    android:padding="5dp"
-                                    android:textAlignment="center"
-                                    android:layout_gravity="center_horizontal"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="13sp"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_gravity="top"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Sta. Anita"
-                                    android:textAlignment="center"
-
-                                    android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="S/. 50.70"
-                                    android:textAlignment="center"
-
-                                    android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>                    <!-- Card 2 -->
-                    <android.support.v7.widget.CardView
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:cardBackgroundColor="@android:color/white"
-                        android:layout_columnWeight="1"
-                        android:layout_marginBottom="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp"
-                        app:cardElevation="8dp"
-                        android:layout_rowWeight="1"
-
-                        >
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:background="@android:color/white"
-                            android:orientation="vertical">
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_gravity="top"
-                                android:layout_weight="0.8"
-                                android:background="@color/colorPrimaryDark"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="04-05-2019"
-                                    android:textAlignment="center"
-                                    android:layout_gravity="center"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_weight="0.6"
-                                android:gravity="center_horizontal"
-                                android:background="#EDCC32"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:text="Metro"
-                                    android:padding="5dp"
-                                    android:textAlignment="center"
-                                    android:layout_gravity="center_horizontal"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="13sp"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_gravity="top"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Sta. Anita"
-                                    android:textAlignment="center"
-
-                                    android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="S/. 50.70"
-                                    android:textAlignment="center"
-
-                                    android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>                    <!-- Card 3 -->
-                    <android.support.v7.widget.CardView
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:cardBackgroundColor="@android:color/white"
-                        android:layout_columnWeight="1"
-                        android:layout_marginBottom="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp"
-                        app:cardElevation="8dp"
-                        android:layout_rowWeight="1"
-
-                        >
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:background="@android:color/white"
-                            android:orientation="vertical">
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_gravity="top"
-                                android:layout_weight="0.8"
-                                android:background="@color/colorPrimaryDark"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="04-05-2019"
-                                    android:textAlignment="center"
-                                    android:layout_gravity="center"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_weight="0.6"
-                                android:gravity="center_horizontal"
-                                android:background="#D31019"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:text="Plaza Vea"
-                                    android:padding="5dp"
-                                    android:textAlignment="center"
-                                    android:layout_gravity="center_horizontal"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="13sp"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_gravity="top"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Sta. Anita"
-                                    android:textAlignment="center"
-
-                                    android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="S/. 50.70"
-                                    android:textAlignment="center"
-
-                                    android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>                    <!-- Card 4 -->
-                    <android.support.v7.widget.CardView
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:cardBackgroundColor="@android:color/white"
-                        android:layout_columnWeight="1"
-                        android:layout_marginBottom="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp"
-                        app:cardElevation="8dp"
-                        android:layout_rowWeight="1"
-
-                        >
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:background="@android:color/white"
-                            android:orientation="vertical">
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_gravity="top"
-                                android:layout_weight="0.8"
-                                android:background="@color/colorPrimaryDark"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="04-05-2019"
-                                    android:textAlignment="center"
-                                    android:layout_gravity="center"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_weight="0.6"
-                                android:gravity="center_horizontal"
-                                android:background="#EDCC32"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:text="Metro"
-                                    android:padding="5dp"
-                                    android:textAlignment="center"
-                                    android:layout_gravity="center_horizontal"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="13sp"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_gravity="top"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Sta. Anita"
-                                    android:textAlignment="center"
-
-                                    android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="S/. 50.70"
-                                    android:textAlignment="center"
-
-                                    android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>                    <!-- Card 3 -->
-                    <android.support.v7.widget.CardView
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:cardBackgroundColor="@android:color/white"
-                        android:layout_columnWeight="1"
-                        android:layout_marginBottom="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp"
-                        app:cardElevation="8dp"
-                        android:layout_rowWeight="1"
-
-                        >
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:background="@android:color/white"
-                            android:orientation="vertical">
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_gravity="top"
-                                android:layout_weight="0.8"
-                                android:background="@color/colorPrimaryDark"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="04-05-2019"
-                                    android:textAlignment="center"
-                                    android:layout_gravity="center"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_weight="0.6"
-                                android:gravity="center_horizontal"
-                                android:background="#EDCC32"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:text="Metro"
-                                    android:padding="5dp"
-                                    android:textAlignment="center"
-                                    android:layout_gravity="center_horizontal"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="13sp"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_gravity="top"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Sta. Anita"
-                                    android:textAlignment="center"
-
-                                    android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                                <TextView
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="S/. 50.70"
-                                    android:textAlignment="center"
-
-                                    android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>                    <!-- Card 4 -->
-
-                </GridLayout>
+                    tools:ignore="UselessParent"
+                    android:columnWidth="90dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="10dp"
+                    android:horizontalSpacing="10dp"
+                    android:stretchMode="columnWidth"
+                    android:gravity="center">
+
+                </GridView>
 
             </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
 
-</ScrollView>
+</LinearLayout>

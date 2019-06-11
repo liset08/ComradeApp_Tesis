@@ -1,6 +1,7 @@
-package com.example.comradeappsoftware.activities;
+package com.example.comradeappsoftware.activities.ProductoModulo1;
 
 import android.Manifest;
+import android.app.Service;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -16,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,7 +25,10 @@ import android.widget.Toast;
 
 import com.example.comradeappsoftware.R;
 import com.example.comradeappsoftware.models.ChainProduct;
+import com.example.comradeappsoftware.models.OrderDetails;
+import com.example.comradeappsoftware.models.Orders;
 import com.example.comradeappsoftware.models.Product;
+import com.example.comradeappsoftware.models.VariablesGlobales;
 import com.example.comradeappsoftware.services.ApiService;
 import com.example.comradeappsoftware.services.ApiServiceGenerator;
 import com.squareup.picasso.Picasso;
@@ -44,7 +49,14 @@ import retrofit2.Response;
 public class NuevoProductoActivity extends AppCompatActivity {
 
     ImageView imageView_Product;
-    TextView textView_Producto, textView_Precio;
+    TextView textView_Producto ,textView_cantidad,textView_total;
+    EditText textView_Precio;
+    private ApiService service;
+    //Variables del contador
+public int contador =1,id_producto,cantidad;
+    Button btnDisminuir,btnAumentar;
+    TextView txtNumero;
+    private String precio,total;
 
     private String[] items = {"Camera" , "Gallery"};
 
@@ -62,8 +74,15 @@ public class NuevoProductoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuevo_producto);
 
+        service = ApiServiceGenerator.createService(ApiService.class);
+
+        Contador();
         textView_Precio = findViewById(R.id.textView_Precio);
         textView_Producto = findViewById(R.id.textView_Producto);
+        textView_cantidad = findViewById(R.id.txt_numero);
+        textView_total = findViewById(R.id.total_product);
+
+
         imageView_Product = findViewById(R.id.imageView_Product);
         imageView_Product.setImageResource(R.drawable.camera);
         imageView_Product.setOnClickListener(new View.OnClickListener() {
@@ -81,9 +100,6 @@ public class NuevoProductoActivity extends AppCompatActivity {
 
     }
 
-    public void BackList(View view){
-        startActivity(new Intent(NuevoProductoActivity.this, ListaProductosActivity.class));
-    }
 
     private void checkAllPermissions() {
         boolean permissionRequired = false;
@@ -116,6 +132,7 @@ public class NuevoProductoActivity extends AppCompatActivity {
             }
         }
     }
+
 
     private void openImage() {
 
@@ -280,6 +297,7 @@ public class NuevoProductoActivity extends AppCompatActivity {
                         Product product = response.body();
 
                         textView_Producto.setText(product.getNombre());
+                      VariablesGlobales.setId_producto_predict(product.getIdproducto());
 
 
 
@@ -305,4 +323,82 @@ public class NuevoProductoActivity extends AppCompatActivity {
         });
     }
 
+
+    public void Contador(){
+
+        btnAumentar = findViewById(R.id.btn_adicionar);
+        btnDisminuir = findViewById(R.id.btn_disminuir);
+         txtNumero= findViewById(R.id.txt_numero);
+btnAumentar.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        contador++;
+
+        txtNumero.setText(String.valueOf(contador));
+   mostrarTotalProduct();
+    }
+});
+
+btnDisminuir.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+            contador--;
+
+        txtNumero.setText(String.valueOf(contador));
+        mostrarTotalProduct();
+    }
+});
+
+
+    }
+
+public void mostrarTotalProduct(){
+    cantidad = Integer.parseInt(textView_cantidad.getText().toString());
+    precio = textView_Precio.getText().toString();
+    total = String.valueOf(cantidad * Double.parseDouble(precio));
+    textView_total.setText(total);
+}
+    //registra el producto
+
+    public void BackList(View view){
+    }
+
+    public void NewOrderDetails(View view){
+
+
+        //CAMBIA EL ID DEL PRODUCTO
+        //VariablesGlobales.getId_producto_predict() => id ´producto service
+        Call<OrderDetails> call = service.CreateOrdenPedido(VariablesGlobales.getId_pedido(),2,cantidad,precio, total);
+
+
+        call.enqueue(new Callback<OrderDetails>() {
+            @Override
+            public void onResponse(Call<OrderDetails> call, Response<OrderDetails> response) {
+                try {
+                    int statusCode = response.code();
+                    Log.e(TAG, "HTTP status code : " + statusCode);
+
+                    if (response.isSuccessful()) {
+
+                        OrderDetails responseMessage = response.body();
+
+                        //     VariablesGlobales.set(responseMessage.getIdpedido());
+                        startActivity(new Intent(NuevoProductoActivity.this, ListaProductosActivity.class));
+                    finish();
+
+
+                    }
+                } catch (Exception e) {
+                    Toast.makeText(NuevoProductoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Log.e(TAG, "onThrowable: " + e.toString(), e);
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, Throwable t) {
+                Toast.makeText(NuevoProductoActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+                Log.e(TAG, t.getMessage());
+            }
+        });
+    }
 }
