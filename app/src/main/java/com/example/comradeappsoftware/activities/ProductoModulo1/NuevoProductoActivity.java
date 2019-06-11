@@ -366,7 +366,7 @@ public void mostrarTotalProduct(){
     public void NewOrderDetails(View view){
 
 
-
+        //CAMBIA EL ID DEL PRODUCTO
         //VariablesGlobales.getId_producto_predict() => id ´producto service
         Call<OrderDetails> call = service.CreateOrdenPedido(VariablesGlobales.getId_pedido(),2,cantidad,precio, total);
 
@@ -382,7 +382,7 @@ public void mostrarTotalProduct(){
 
                         OrderDetails responseMessage = response.body();
 
-                //        VariablesGlobales.set(responseMessage.getIdpedido());
+                        //     VariablesGlobales.set(responseMessage.getIdpedido());
                         startActivity(new Intent(NuevoProductoActivity.this, ListaProductosActivity.class));
                     finish();
 

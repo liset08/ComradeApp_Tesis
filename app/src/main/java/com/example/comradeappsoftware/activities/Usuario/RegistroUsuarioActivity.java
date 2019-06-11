@@ -10,7 +10,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.comradeappsoftware.R;
+import com.example.comradeappsoftware.activities.LoginMainActivity;
 import com.example.comradeappsoftware.activities.MenuMainActivity;
+import com.example.comradeappsoftware.models.Login;
 import com.example.comradeappsoftware.models.User;
 import com.example.comradeappsoftware.services.ApiService;
 import com.example.comradeappsoftware.services.ApiServiceGenerator;
@@ -86,7 +88,7 @@ if (st_password.equals(st_password_repit)){
                         st_username = responseMessage.getUsername();*/
 
                     Toast.makeText(RegistroUsuarioActivity.this, "Registro completo...", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(RegistroUsuarioActivity.this, MenuMainActivity.class));
+                    startActivity(new Intent(RegistroUsuarioActivity.this, LoginMainActivity.class));
                     finish();
                 }
             } catch (Exception e) {

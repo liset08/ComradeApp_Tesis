@@ -16,7 +16,9 @@
         android:supportsRtl="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".activities.Usuario.RegistroUsuarioActivity"
-            android:theme="@style/AppThemeAction"></activity>
+            android:theme="@style/AppThemeAction"
+            android:label="Registro"
+            ></activity>
         <activity
             android:name=".activities.ListaProductoxNotasActivity"
             android:label="Productos"
@@ -27,6 +29,7 @@
         <activity
             android:name=".activities.ListaNotasActivity"
             android:label="Listas"
+            android:parentActivityName=".activities.MenuMainActivity"
             android:theme="@style/AppThemeAction">
 
         </activity>

@@ -2,8 +2,9 @@ package com.example.comradeappsoftware.models;
 
 public class Sede {
 
-    private int idsupermercado;
-    private int iddistrito;
+
+    private Supermercado idsupermercado;
+    private Distrito iddistrito;
     private String direccion;
     private String longitud2;
     private String latitud2;
@@ -11,19 +12,19 @@ public class Sede {
     private String latitud;
     private int idsede;
 
-    public int getIdsupermercado() {
+    public Supermercado getIdsupermercado() {
         return idsupermercado;
     }
 
-    public void setIdsupermercado(int idsupermercado) {
+    public void setIdsupermercado(Supermercado idsupermercado) {
         this.idsupermercado = idsupermercado;
     }
 
-    public int getIddistrito() {
+    public Distrito getIddistrito() {
         return iddistrito;
     }
 
-    public void setIddistrito(int iddistrito) {
+    public void setIddistrito(Distrito iddistrito) {
         this.iddistrito = iddistrito;
     }
 
@@ -74,4 +75,5 @@ public class Sede {
     public void setIdsede(int idsede) {
         this.idsede = idsede;
     }
+
 }

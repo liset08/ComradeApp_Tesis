@@ -58,33 +58,5 @@ public class OrderDetails {
         this.idpedidodeta = idpedidodeta;
     }
 
-    public static class Idproducto {
-        private int idmarca;
-        private String nombre;
-        private int idproducto;
 
-        public int getIdmarca() {
-            return idmarca;
-        }
-
-        public void setIdmarca(int idmarca) {
-            this.idmarca = idmarca;
-        }
-
-        public String getNombre() {
-            return nombre;
-        }
-
-        public void setNombre(String nombre) {
-            this.nombre = nombre;
-        }
-
-        public int getIdproducto() {
-            return idproducto;
-        }
-
-        public void setIdproducto(int idproducto) {
-            this.idproducto = idproducto;
-        }
-    }
 }

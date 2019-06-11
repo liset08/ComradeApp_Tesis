@@ -58,9 +58,8 @@ public interface ApiService {
 
     //Creacion de un pedido
     @FormUrlEncoded
-    @POST("api/orders/")
-    Call<Orders> CreatePedido(@Field("fec_pedido") String fec_pedido,
-                              @Field("usuarios_idusuario") Integer usuarios_idusuario,
+    @POST("api/createorder/")
+    Call<Orders> CreatePedido(@Field("usuarios_idusuario") Integer usuarios_idusuario,
                               @Field("sedes_idsede") Integer sedes_idsede);
 
     //lista de productos con el id de orden
@@ -80,5 +79,15 @@ public interface ApiService {
     //DELETE PRODUCTO
     @DELETE("api/orderdetails/{idpedidodeta}/")
     Call<OrderDetails> destroyProducto(@Path("idpedidodeta") Integer idpedidodeta );
+
+    //LISTA DE NOTAS POR USUARIO
+    @FormUrlEncoded
+    @POST("api/orderbyuser/")
+    Call<List<Orders>> getorders(@Field("idusuario") int idusuario);
+
+    //Lista de pedidos por idpedido
+
+    @GET("api/orders/{idpedido}")
+    Call<Orders> getorderspedido(@Path("idpedido") int idpedido);
 
 }

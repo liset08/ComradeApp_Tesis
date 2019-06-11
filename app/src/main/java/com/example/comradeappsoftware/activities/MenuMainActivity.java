@@ -54,7 +54,7 @@ public class MenuMainActivity extends AppCompatActivity {
         id_user = sharedPreferences.getInt("id_user",0);
 
         TextView txt_name = findViewById(R.id.txt_name_user);
-        txt_name.setText(name+""+ lastname);
+        txt_name.setText(name+" "+ lastname);
 
 
     }
@@ -233,7 +233,7 @@ public class MenuMainActivity extends AppCompatActivity {
     }
 
     public void NewOrder(){
-        Call<Orders> call = service.CreatePedido("2019-03-16",id_user,id_sede);
+        Call<Orders> call = service.CreatePedido(id_user,id_sede);
 
 
         call.enqueue(new Callback<Orders>() {
@@ -249,7 +249,7 @@ public class MenuMainActivity extends AppCompatActivity {
 
                         VariablesGlobales.setId_pedido(responseMessage.getIdpedido());
                         startActivity(new Intent(MenuMainActivity.this, ListaProductosActivity.class));
-                        finish();
+
 
                     }
                 } catch (Exception e) {

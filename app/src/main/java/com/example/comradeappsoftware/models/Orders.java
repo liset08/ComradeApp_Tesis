@@ -1,18 +1,29 @@
 package com.example.comradeappsoftware.models;
 
+import java.util.List;
+
 public class Orders {
 
 
-    private int sedes_idsede;
+    private List<OrderDetails> orderdetail;
+    private Sede sedes_idsede;
     private int usuarios_idusuario;
     private String fec_pedido;
     private int idpedido;
 
-    public int getSedes_idsede() {
+    public List<OrderDetails> getOrderdetail() {
+        return orderdetail;
+    }
+
+    public void setOrderdetail(List<OrderDetails> orderdetail) {
+        this.orderdetail = orderdetail;
+    }
+
+    public Sede getSedes_idsede() {
         return sedes_idsede;
     }
 
-    public void setSedes_idsede(int sedes_idsede) {
+    public void setSedes_idsede(Sede sedes_idsede) {
         this.sedes_idsede = sedes_idsede;
     }
 
@@ -38,5 +49,6 @@ public class Orders {
 
     public void setIdpedido(int idpedido) {
         this.idpedido = idpedido;
-    }
-}
+    }}
+
+
